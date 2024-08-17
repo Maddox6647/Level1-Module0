@@ -10,8 +10,9 @@ import tkinter as tk
 #         b. Add the guest to list_of_guests
 #         c. Return the list_of_guests
 def add_guest(list_of_guests):
-
-    return list()
+    guest_name = simpledialog.askstring(title='llllllkjsdlsadf', prompt="what is ur name????????????")
+    list_of_guests.append(guest_name)
+    return list_of_guests
 
 # TODO 2) Complete the function by:
 #         a. Asking for the name of the guest to remove
@@ -19,17 +20,20 @@ def add_guest(list_of_guests):
 #            the guest isn't in the list.
 #         c. Return the list_of_guests
 def remove_guest(list_of_guests):
-
-    return list()
+    remove_guest_name = simpledialog.askstring(title='lkjlhguyftytgyt', prompt='please remove a guest')
+    list_of_guests.remove(remove_guest_name)
+    return list_of_guests
 
 # TODO 3) Complete the function by:
 #         a. Display the names of the guests in the following format:
-#            Guest 1. Alan
-#            Guest 2. Maria
-#            Guest 3. Jin
+#            Guest 1. Peppa Pig
+#            Guest 2. Amogus
+#            Guest 3. Shrek
 #         b. If there are no guests, print "There are no guests"
 def print_guests(list_of_guests):
-    pass
+    for i in range(len(list_of_guests)):
+        print("guest " + str(i+1) + ". " + list_of_guests[i])
+
 
 # ======================= DO NOT EDIT THE CODE BELOW =========================
 
