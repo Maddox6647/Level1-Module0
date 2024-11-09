@@ -19,8 +19,10 @@ def setup_new_word(word_to_guess):
 #  letter = o (a string)
 #  return True
 def check_letter_in_word(word_to_guess, letter):
-
-    return False
+    if word_to_guess.count(letter) > 0:
+        return True
+    else:
+        return False
 
 # TODO 3) Complete the function to return the current guess with the
 #  letter in the same places (index) of the word to guess. For example,
@@ -30,8 +32,14 @@ def check_letter_in_word(word_to_guess, letter):
 #       return o__nge (a string)
 #  Remember that strings can't be changed directly!
 def replace_letter_in_word(word_to_guess, current_guess, letter):
+    if check_letter_in_word(word_to_guess, letter) == False:
+        return current_guess
+    else:
+        for i in range(len(word_to_guess)):
+            if word_to_guess[i] == letter:
+                current_guess = current_guess[:i] + letter + current_guess[i+1:]
 
-    return str()
+    return current_guess
 
 # ====================== DO NOT EDIT THE CODE BELOW ===========================
 
